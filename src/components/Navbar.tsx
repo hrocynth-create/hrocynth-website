@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <header className="site-header">
       <div className="nav-shell">
-        <Brand />
+        <Brand expandOnHover />
         <nav className="desktop-nav" aria-label="Main navigation">
           {navItems.map(item => item.children ? (
             <div className="nav-dropdown" key={item.label}>
@@ -23,7 +23,7 @@ export default function Navbar() {
             </div>
           ) : <NavLink key={item.href} to={item.href} className={({isActive}) => `nav-link ${isActive ? "active" : ""}`}>{item.label}</NavLink>)}
         </nav>
-        <Link to="/contact" className="nav-cta">Let's Talk <ArrowUpRight size={16}/></Link>
+        <Link to="/contact" className="nav-cta">Initiate a Conversation  <ArrowUpRight size={16}/></Link>
         <button className="mobile-toggle" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>{open ? <X/> : <Menu/>}</button>
       </div>
       {open && <div className="mobile-menu">
@@ -31,7 +31,7 @@ export default function Navbar() {
           <Link to={item.href} onClick={() => setOpen(false)}>{item.label}</Link>
           {item.children?.map(child => <Link className="mobile-sub" key={child.href} to={child.href} onClick={() => setOpen(false)}>{child.label}</Link>)}
         </div>)}
-        <Link className="mobile-menu-cta" to="/contact" onClick={() => setOpen(false)}>Let's Talk <ArrowUpRight size={16}/></Link>
+        <Link className="mobile-menu-cta" to="/contact" onClick={() => setOpen(false)}>Initiate a Conversation  <ArrowUpRight size={16}/></Link>
       </div>}
     </header>
   );

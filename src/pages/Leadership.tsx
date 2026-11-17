@@ -70,7 +70,7 @@ export default function Leadership() {
           <article className="founder-card founder-card-blue">
               <img
                 className="founder-photo"
-                src="/assets/images/rohan-gopal-kolkar.jpg"
+                src="/assets/images/rohan-gopal-kolkar.png"
                 alt="Rohan Gopal Kolkar - Founder of HROCYNTH"
               />
 
@@ -80,7 +80,7 @@ export default function Leadership() {
 
               <span className="eyebrow">FOUNDER</span>
 
-              <h2>Rohan Gopal Kolkar</h2>
+              <h2>Rohan</h2>
 
               <p>
                 Building HROCYNTH with a vision to create meaningful
@@ -96,7 +96,7 @@ export default function Leadership() {
             <article className="founder-card founder-card-blue">
               <img
                 className="founder-photo"
-                src="/assets/images/shivanand-naganuri.jpg"
+                src="/assets/images/shivanand-naganuri.png"
                 alt="Shivanand Naganuri - Co-Founder of HROCYNTH"
               />
 
@@ -108,7 +108,7 @@ export default function Leadership() {
                 CO-FOUNDER
               </span>
 
-              <h2>Shivanand Naganuri</h2>
+              <h2>Shivanand </h2>
 
               <p>
                 Working towards innovative solutions, meaningful

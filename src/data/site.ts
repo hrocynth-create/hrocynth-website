@@ -93,6 +93,6 @@ export const navItems = [
   { label: "Solutions", href: "/solutions" },
   { label: "Industries", href: "/industries" },
   { label: "Innovation", href: "/innovation", children: [{ label: "Innovation & AI", href: "/innovation" }, { label: "Ventures", href: "/ventures" }] },
-  { label: "Government", href: "/government" },
+  { label: "Public & Institutional ", href: "/government" },
   { label: "Global Approach", href: "/global-approach" },
 ];

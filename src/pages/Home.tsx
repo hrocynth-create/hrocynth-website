@@ -31,7 +31,20 @@ export default function Home() {
 
     <section className="section section-white intro-section">
       <div className="container intro-grid">
-        <Reveal><div className="intro-mark"><img src="/assets/brand/hrocynth-symbol-light.jpg" alt="HROCYNTH symbol"/><span>H</span></div></Reveal>
+        <Reveal>
+          <motion.div
+            className="intro-symbol-stage"
+            initial={{ opacity: 0, scale: .86, rotate: -5 }}
+            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+            whileHover={{ scale: 1.025 }}
+            viewport={{ once: true, amount: .35 }}
+            transition={{ duration: .9, ease: [.22, 1, .36, 1] }}
+          >
+            <span className="intro-symbol-ring intro-symbol-ring--outer" aria-hidden="true"/>
+            <span className="intro-symbol-ring intro-symbol-ring--inner" aria-hidden="true"/>
+            <img className="intro-symbol-image" src="/assets/brand/hrocynth-symbol-light.jpg" alt="HROCYNTH symbol"/>
+          </motion.div>
+        </Reveal>
         <Reveal delay={.1}><div><span className="eyebrow">THE HROCYNTH PERSPECTIVE</span><h2>Vision creates possibility.<br/><em>Execution creates impact.</em></h2><p className="lead">{company.purpose}</p><p>We combine strategic insight, advanced technologies and human ingenuity to help businesses reimagine possibilities, unlock growth and achieve enduring success in an ever-evolving world.</p><Link className="text-link" to="/about">Discover who we are <ArrowRight size={17}/></Link></div></Reveal>
       </div>
     </section>

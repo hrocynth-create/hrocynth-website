@@ -24,15 +24,15 @@ function Earth() {
       <Float speed={0.7} rotationIntensity={0.035} floatIntensity={0.16}>
         <mesh ref={earth}>
           <sphereGeometry args={[1.48, 96, 96]} />
-          <meshStandardMaterial map={surface} roughness={0.92} metalness={0.04} />
+          <meshStandardMaterial map={surface} roughness={0.92} metalness={0.04} transparent opacity={0.75} />
         </mesh>
         <mesh ref={atmosphere} scale={1.045}>
           <sphereGeometry args={[1.48, 64, 64]} />
-          <meshBasicMaterial color="#20aaff" transparent opacity={0.12} side={THREE.BackSide} />
+          <meshBasicMaterial color="#20aaff" transparent opacity={0.06} side={THREE.BackSide} />
         </mesh>
         <mesh scale={1.075}>
           <sphereGeometry args={[1.48, 64, 64]} />
-          <meshBasicMaterial color="#168bff" transparent opacity={0.055} side={THREE.BackSide} />
+          <meshBasicMaterial color="#168bff" transparent opacity={0.025} side={THREE.BackSide} />
         </mesh>
       </Float>
     </group>
@@ -129,3 +129,7 @@ export default function Hero3D() {
     </div>
   );
 }
+
+
+
+
