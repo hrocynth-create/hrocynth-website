@@ -147,20 +147,23 @@ export default function Contact() {
 
     try {
       // Check backend URL
-      const apiUrl = (import.meta as ImportMeta & {
-        env: { VITE_API_URL?: string };
-      }).env.VITE_API_URL;
+      // const apiUrl = (import.meta as ImportMeta & {
+      //   env: { VITE_API_URL?: string };
+      // }).env.VITE_API_URL;
 
-      if (!apiUrl) {
-        throw new Error(
-          "Backend API URL is missing. Please configure VITE_API_URL in your frontend .env file."
-        );
-      }
+      // if (!apiUrl) {
+      //   throw new Error(
+      //     "Backend API URL is missing. Please configure VITE_API_URL in your frontend .env file."
+      //   );
+      // }
 
-      // Send enquiry to backend
-      const response = await fetch(
-        `${apiUrl.replace(/\/+$/, "")}/api/contact`,
-        {
+      // // Send enquiry to backend
+      // const response = await fetch(
+      //   `${apiUrl.replace(/\/+$/, "")}/api/contact`,
+      // Send enquiry to backend through the same domain
+const response = await fetch(
+  "/api/contact",  
+      {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
