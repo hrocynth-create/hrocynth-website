@@ -249,8 +249,8 @@ const response = await fetch(
               <div>
                 <small>BUSINESS ENQUIRIES</small>
 
-                <a href="mailto:hello@hrocynth.com">
-                  hello@hrocynth.com
+                <a href="mailto:support@hrocynth.com">
+                  support@hrocynth.com
                 </a>
 
                 <p>
